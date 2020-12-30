@@ -16,3 +16,10 @@ def keep_value(func):
         return ValueKeepingGenerator(func(*args, **kwargs))
 
     return g
+
+
+def Natural(s: str) -> int:
+    value = int(s)
+    if value <= 1:
+        raise ValueError('Invalid value for natural')
+    return value

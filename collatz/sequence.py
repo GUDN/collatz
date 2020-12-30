@@ -7,6 +7,7 @@ class SequenceOptions(NamedTuple):
     a: int = 3
     b: int = 3
     c: int = 3
+    max_: int = 200000
 
     def __repr__(self):
         return f'n * {self.a} + {self.b} if n % {self.c} else n // {self.c}'
@@ -29,4 +30,6 @@ def sequence(
         yield n
         n = options.apply(n)
         result += 1
+        if result > options.max_:
+            raise ValueError('Infinite sequence')
     return result
