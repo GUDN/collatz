@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "collatz"
-version = "0.1.0"
+version = "1.0.0"
 description = "A Collatz hypothesis tester"
 authors = ["Daniil Novoselov <gudnmail@gmail.com>"]
 
